@@ -1,0 +1,8 @@
+{
+    "name": "advent-of-code-2022",
+    "version": "1.0.0",
+    "license": "MIT",
+    "dependencies": {
+        "nbb": "^1.1.151"
+    }
+}
