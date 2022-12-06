@@ -3,6 +3,19 @@
             [clojure.set :as set]
             [clojure.string :as str]))
 
+(def sample-lines
+  ["vJrwpWtwJgWrhcsFMMfFFhFp"
+   "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL"
+   "PmmdzqPrVvPwwTWBwg"
+   "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn"
+   "ttgJtRGJQctTZtZT"
+   "CrZsJsPPZsGzwwsLwLmpwMDw"])
+
+(def input-lines
+  (-> "resources/day_03.txt"
+      fs/readFileSync
+      (str/split "\n")))
+
 (defn find-double [line]
   (let [half-count (/ (count line)
                       2)
@@ -19,18 +32,7 @@
       (+ priority 58)
       priority)))
 
-(def sample-lines
-  ["vJrwpWtwJgWrhcsFMMfFFhFp"
-   "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL"
-   "PmmdzqPrVvPwwTWBwg"
-   "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn"
-   "ttgJtRGJQctTZtZT"
-   "CrZsJsPPZsGzwwsLwLmpwMDw"])
 
-(def input-lines
-  (-> "resources/day_03.txt"
-      fs/readFileSync
-      (str/split "\n")))
 
 (defn solve-part-1 [lines]
   (println "Part 1:"
