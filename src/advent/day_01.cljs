@@ -1,4 +1,4 @@
-(ns day-01
+(ns advent.day-01
   (:require ["fs" :as fs]
             [clojure.string :as str]))
 
