@@ -2,7 +2,7 @@
   (:require ["fs" :as fs]
             [clojure.string :as str]))
 
-(defn run []
+(defn -main []
   (let [input-str (fs/readFileSync "resources/day_01.txt")
         lines (str/split input-str "\n")
         blocks (->> lines
@@ -19,5 +19,3 @@
                       (apply +))]
     (println "Answer 1:" answer-1)
     (println "Answer 2:" answer-2)))
-
-(run)

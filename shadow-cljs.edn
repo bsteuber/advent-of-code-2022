@@ -1,0 +1,9 @@
+{:source-paths ["src" "test"]
+ :dependencies [[com.bhauman/cljs-test-display "0.1.1"]
+                [funcool/promesa "10.0.570"]]
+ :dev-http {8000 "suite"}
+ :builds       {:test {:output-dir "suite/js/out"
+                       :asset-path "js/out"
+                       :target     :browser
+                       :modules    {:test {:init-fn main.tests/run}}
+                       :devtools   {:after-load main.tests/run}}}}

@@ -1,8 +1,10 @@
 {
-    "name": "advent-of-code-2022",
-    "version": "1.0.0",
-    "license": "MIT",
+    "scripts": {
+        "dev": "shadow-cljs watch test"
+    },
+    "devDependencies": {},
     "dependencies": {
-        "nbb": "^1.1.151"
+        "nbb": "^1.1.151",
+        "shadow-cljs": "^2.20.13"
     }
 }
